@@ -1,12 +1,16 @@
 import "./styles.css";
+import { v4 } from "uuid";
+
+ 
 
 function Homework06() {
-  interface Venicle {
-    brand: string;
-    price: number;
-    isDiesel: boolean;
-  }
 
+    interface Venicle {
+        brand: string;
+        price: number;
+        isDiesel: boolean;
+      }
+    
   let cars: Venicle[] = [
     { brand: "BMW", price: 20000, isDiesel: true },
     { brand: "Mercedes", price: 22000, isDiesel: false },
@@ -18,10 +22,10 @@ function Homework06() {
   let cards = cars.map((value: Venicle) => {
     let petrol: string = value.isDiesel ? "Diesel" : "notDiesel";
     return (
-      <div className="card-control">
+      <div key ={v4()} className="card-control">
         <p className="card-item">Brand: {value.brand}</p>
         <p className="card-item">Price: {value.price}</p>
-        <p className="card-item">Petrol: {petrol}</p>
+        <p className="card-item">Fuel type: {petrol}</p>
       </div>
     );
   });
