@@ -3,7 +3,8 @@
 
 import {FeedbackProps} from "./types"
 
-import Button from "../Button/Button";
+import Button from "components/Button/Button";
+
 import "./styles.css";
 
 function Feedback({like, dislike, onDislike, onLike, resetResults}: FeedbackProps) {
