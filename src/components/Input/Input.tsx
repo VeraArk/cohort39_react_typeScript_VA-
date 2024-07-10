@@ -12,7 +12,7 @@ function Input({ id, name, type = "text", placeholder, disabled=false, label, er
         type={type}
         disabled={disabled}
         placeholder={placeholder}
-      //  error = {error}
+        $error = {error}
       />
     </InputWrapper>
   );

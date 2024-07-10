@@ -12,7 +12,7 @@ const borderInput = (error: string | undefined)=>{
   if((typeof error)=== 'string'){
     return "red"
   }
-  else "#3f3f3f"
+  else return "#3f3f3f"
 }
 
 export const InputWrapper = styled("div")`
