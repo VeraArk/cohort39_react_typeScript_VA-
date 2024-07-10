@@ -1,4 +1,7 @@
-.card-wrapper {
+import styled from "@emotion/styled";
+
+
+export const CardWrapper = styled("div") `
   display: flex;
   flex-direction: column;
   width: 400px;
@@ -11,19 +14,19 @@
   -webkit-box-shadow: -1px 2px 19px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -1px 2px 19px 0px rgba(0, 0, 0, 0.75);
   box-shadow: -1px 2px 19px 0px rgba(0, 0, 0, 0.75);
-}
+`
 
-.card-item {
+export const CardItem =  styled("p") `
   font-size: 24px;
   font-weight: bold;
-}
+`
 
-.card-info{
+export const CardInfo =  styled("p") `
   font-size: 26px;
   font-weight: 400;
-}
+`
 
-.avatar {
+export const Avatar = styled("img")`
   width: 100%;
   height: 400px;
-}
+`

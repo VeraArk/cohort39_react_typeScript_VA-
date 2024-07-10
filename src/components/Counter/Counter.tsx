@@ -1,4 +1,4 @@
-  import "./styles.css";
+import { CounterWrapper, ButtonControl, Count } from "./styles";
 
 import Button from "../Button/Button";
 
@@ -8,20 +8,20 @@ interface CounterProps {
   onMinus: () => void;
 }
 
-function Counter({count, onPlus, onMinus}: CounterProps) {
+function Counter({ count, onPlus, onMinus }: CounterProps) {
   return (
-    <div className="counter-wrapper">
-      <div className="button-control">
+    <CounterWrapper>
+      <ButtonControl>
         <Button name="-" onClick={onMinus} />
-      </div>
-      <p className="count">{count}</p>
-      <div className="button-control">
+      </ButtonControl>
+      <Count>{count}</Count>
+      <ButtonControl>
         <Button name="+" onClick={onPlus} />
-      </div>
+      </ButtonControl>
       {/* Пример работы со стейтом */}
       {/* <button onClick={addAnimal}>Set Animal</button>
       <button onClick={changeUserName}>Change user name</button> */}
-    </div>
+    </CounterWrapper>
   );
 }
 

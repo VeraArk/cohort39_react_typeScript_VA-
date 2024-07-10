@@ -6,7 +6,8 @@ import LoginForm from "components/LoginForm/LoginForm";
 
 import simpson from "../../assets/simpson.jpg";
 import simpsonM from "../../assets/simpsonM.jpg";
-import "./styles.css";
+import {PageWrapper, LoginContainer, CardsContainer, FeedbackContainer} from "./styles"
+
 
 function Homework07() {
   const [like, setLike] = useState<number>(0);
@@ -41,12 +42,12 @@ function Homework07() {
   };
 
   return (
-    <div className="page-wrapper" >
-      <div className="login-container">
+    <PageWrapper>
+      <LoginContainer>
         <LoginForm />
-      </div>
+      </LoginContainer>
 
-      <div className="cards-container">
+      <CardsContainer>
         <SimponsCard
           avatar={homerSimpson.avatar}
           firstName={homerSimpson.firstName}
@@ -62,9 +63,9 @@ function Homework07() {
           job={margeSimpson.job}
           hobby={margeSimpson.hobby}
         />
-      </div>
+      </CardsContainer>
 
-      <div className="feedback-container">
+      <FeedbackContainer>
         <Feedback
           like={like}
           dislike={dislike}
@@ -72,8 +73,8 @@ function Homework07() {
           onDislike={onDislike}
           resetResults={resetResults}
         />
-      </div>
-    </div>
+      </FeedbackContainer>
+    </PageWrapper>
   );
 }
 

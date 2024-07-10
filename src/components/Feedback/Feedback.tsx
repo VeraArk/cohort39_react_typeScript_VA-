@@ -5,7 +5,7 @@ import {FeedbackProps} from "./types"
 
 import Button from "components/Button/Button";
 
-import "./styles.css";
+import { FeedbackWrapper, FeedbackControl, ButtonWithCountContainer, Count } from "./styles"
 
 function Feedback({like, dislike, onDislike, onLike, resetResults}: FeedbackProps) {
   /*const [like, setLike] = useState(0);
@@ -24,20 +24,20 @@ function Feedback({like, dislike, onDislike, onLike, resetResults}: FeedbackProp
   };*/
 
   return (
-    <div className="feedback-wrapper">
-      <div className="feedback-control">
-        <div className="buttonwithcount-container">
+    <FeedbackWrapper>
+      <FeedbackControl>
+        <ButtonWithCountContainer>
           {/* <Button imgSrc={Like} name="Like" onClick={onLike} /> */}
           <Button name="Like" onClick={onLike} />
-          <p className="count">{like}</p>
-        </div>
-        <div className="buttonwithcount-container">
+          <Count>{like}</Count>
+        </ButtonWithCountContainer>
+        <ButtonWithCountContainer>
           <Button name="Dislike" type= "button" onClick={onDislike} />
-          <p className="count">{dislike}</p>
-        </div>
-      </div>
+          <Count>{dislike}</Count>
+        </ButtonWithCountContainer>
+      </FeedbackControl>
       <Button name="Reset Results" onClick={resetResults} />
-    </div>
+    </FeedbackWrapper>
   );
 }
 
