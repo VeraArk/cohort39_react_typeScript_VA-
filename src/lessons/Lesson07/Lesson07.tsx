@@ -1,7 +1,7 @@
 import Button from "../../components/Button/Button";
 import Counter from "components/Counter/Counter";
 import { useState } from "react";
-import "./styles.css";
+import {PageWrapper} from "./styles";
 
 function Lesson07() {
   enum WEATHER_CODES {
@@ -115,10 +115,10 @@ function Lesson07() {
   };
 
   return (
-    <div className="homework7-wrapper">
+    <PageWrapper>
       <Counter count={count} onMinus={onMinus} onPlus={onPlus} />
       <Button name="Send count" onClick={sendCountToServer} />
-    </div>
+    </PageWrapper>
   );
 }
 

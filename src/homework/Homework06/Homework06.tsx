@@ -1,7 +1,5 @@
-import "./styles.css";
+import {PageWrapper, CardControl, CardItem} from "./styles";
 import { v4 } from "uuid";
-
- 
 
 function Homework06() {
 
@@ -22,15 +20,15 @@ function Homework06() {
   let cards = cars.map((value: Venicle) => {
     let petrol: string = value.isDiesel ? "Diesel" : "notDiesel";
     return (
-      <div key ={v4()} className="card-control">
-        <p className="card-item">Brand: {value.brand}</p>
-        <p className="card-item">Price: {value.price}</p>
-        <p className="card-item">Fuel type: {petrol}</p>
-      </div>
+      <CardControl key ={v4()} >
+        <CardItem>Brand: {value.brand}</CardItem>
+        <CardItem>Price: {value.price}</CardItem>
+        <CardItem>Fuel type: {petrol}</CardItem>
+      </CardControl>
     );
   });
 
-  return <div className="page-wrapper">{cards}</div>;
+  return <PageWrapper>{cards}</PageWrapper>;
 }
 
 export default Homework06;
