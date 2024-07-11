@@ -2,7 +2,7 @@ import { InputProps } from "./types";
 
 import { InputWrapper, InputLabel, InputComponent } from "./styles";
 
-function Input({ id, name, type = "text", placeholder, disabled=false, label, error}: InputProps) {
+function Input({ id, name, type = "text", placeholder, disabled=false, label, error, value, onChange}: InputProps) {
   return (
     <InputWrapper>
       <InputLabel htmlFor={id}>{label}</InputLabel>

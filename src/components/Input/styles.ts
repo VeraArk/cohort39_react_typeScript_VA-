@@ -1,4 +1,6 @@
 import styled from "@emotion/styled";
+import {colors} from "styles/colors"
+
 
 const backgroundInput = (disabled: boolean | undefined) => {
   return disabled ?  "grey": "white";
@@ -10,7 +12,7 @@ interface InputComponentProps {
 
 const borderInput = (error: string | undefined)=>{
   if((typeof error)=== 'string'){
-    return "red"
+    return colors.ERROR
   }
   else return "#3f3f3f"
 }
@@ -39,7 +41,7 @@ export const InputComponent = styled("input")<InputComponentProps>`
     backgroundInput(disabled)};
   
   &::placeholder {
-    color: #6f6f6f;
+    color: PLACEHOLDER;
     font-size: 16px;
   }
 `;

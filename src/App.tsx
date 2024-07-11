@@ -1,4 +1,4 @@
-import {AppWrapper} from "./appStyles";
+//import {AppWrapper} from "./appStyles";
 import GlobalStyles from "styles/GlobalStyles";
 
 import Homework07 from "homework/Homework07/Homework07";
@@ -11,7 +11,7 @@ import Lesson08 from "lessons/Lesson08/Lesson08";
 
 function App() {
   return (
-    <AppWrapper>
+    <>
       <GlobalStyles />
       {/*< Homework06/>*/}
       {/*<Homework07 />*/}
@@ -20,7 +20,7 @@ function App() {
       {/*<Lesson08 />*/}
 
       <Homework08/>
-    </AppWrapper>
+    </>
   );
 }
 
