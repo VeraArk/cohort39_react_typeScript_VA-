@@ -39,10 +39,7 @@ function Homework09() {
   return (
     <PageWrapper>
       <JokeContainer>
-        {error && <p>{error}</p>}
-        {randomJoke && (
-          <JokeCard set={randomJoke.setup} punchline={randomJoke.punchline} />
-        )}
+          <JokeCard randomJoke={randomJoke} error={error} />
       </JokeContainer>
       <ButtonContainer>
       <Button name = "Get a Joke" onClick={getRandomJoke}/>

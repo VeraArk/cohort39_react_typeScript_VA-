@@ -1,13 +1,19 @@
-import {CardWrapper, CardSet,CardPunchline} from "./styles"
-import {JokeCardProps} from "./types"
+import { CardWrapper, CardSet, CardPunchline } from "./styles";
+import { JokeCardProps } from "./types";
 
-
-function JokeCard({set, punchline}: JokeCardProps){
-    return(
-    <><CardWrapper>
-      <CardSet>{set}</CardSet>
-      <CardPunchline>{punchline}</CardPunchline>
-    </CardWrapper></>
-    )
+function JokeCard({ randomJoke, error }: JokeCardProps) {
+  return (
+    <>
+      <CardWrapper>
+        {randomJoke && (
+          <>
+            <CardSet>{randomJoke.setup}</CardSet>
+            <CardPunchline>{randomJoke.punchline}</CardPunchline>
+          </>
+        )}
+        {error && <p>{error}</p>}
+      </CardWrapper>
+    </>
+  );
 }
 export default JokeCard;

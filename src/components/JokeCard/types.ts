@@ -1,6 +1,6 @@
+import {Joke} from "homework/Homework09/types";
 
 export interface JokeCardProps{
-    set: string;
-    punchline:string;
+    randomJoke: Joke| undefined; 
     error?: string | undefined;
 }
