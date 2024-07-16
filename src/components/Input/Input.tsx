@@ -1,19 +1,34 @@
 import { InputProps } from "./types";
+import { StyledInput, InputWrapper, InputLabel, ErrorContainer } from "./styles";
 
-import { InputWrapper, InputLabel, InputComponent } from "./styles";
-
-function Input({ id, name, type = "text", placeholder, disabled=false, label, error, value, onChange}: InputProps) {
+function Input({
+  id,
+  name,
+  type = "text",
+  placeholder,
+  label,
+  disabled,
+  error,
+  value,
+  onChange,
+}: InputProps) {
+  console.log(error)
   return (
     <InputWrapper>
       <InputLabel htmlFor={id}>{label}</InputLabel>
-      <InputComponent
+      <StyledInput
+        disabled={disabled}
         id={id}
         name={name}
         type={type}
-        disabled={disabled}
         placeholder={placeholder}
-        $error = {error}
+        $error={error}
+        // value - это значение самого инпута, т.е то значение котрое введет потенциальный пользователь
+        value={value}
+        // onChange - функция, которая срабатывает, когда пользователь что-то вводит в инпут
+        onChange={onChange}
       />
+      {!!error && <ErrorContainer>{error}</ErrorContainer>}
     </InputWrapper>
   );
 }
