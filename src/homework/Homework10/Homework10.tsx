@@ -27,7 +27,7 @@ function Homework10(){
     
     return <PageWrapper>
         <InputContainer>
-        <Input   id = "inputCountry" name = "getCountry"  placeholder = "Entry Country" value={infoAboutCountry} />
+        {/* <Input   id = "inputCountry" name = "getCountry"  placeholder = "Entry Country" value={infoAboutCountry} /> */}
         <Button name= "Get info"  onClick={getInfoAboutCountry}/>
         <p>Вы ввели: {infoAboutCountry}</p>
         </InputContainer>
