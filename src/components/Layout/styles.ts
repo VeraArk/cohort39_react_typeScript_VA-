@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import { colors } from "styles/colors";
-import {NavLink} from 'react-router-dom'
+import { NavLink, Link as SimpleLink } from "react-router-dom";
 
+import { colors } from "styles/colors";
 
 export const LayoutWrapper = styled.div`
   display: flex;
@@ -40,7 +40,8 @@ export const NavigationContainer = styled.nav`
 export const Link = styled(NavLink)`
   color: white;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: normal;
+  text-decoration: none;
 `;
 
 export const Main = styled.main`
@@ -52,7 +53,7 @@ export const Main = styled.main`
 export const Footer = styled.footer`
   display: flex;
   align-items: center;
-  gap: 200px;
+  justify-content: space-between;
   width: 100%;
   height: 150px;
   border-top: 1px solid black;
@@ -72,7 +73,7 @@ export const FooterNavigation = styled.nav`
   gap: 10px;
 `;
 
-export const FooterLink = styled.a`
+export const FooterLink = styled(SimpleLink)`
   color: white;
   font-size: 14px;
   font-weight: bold;

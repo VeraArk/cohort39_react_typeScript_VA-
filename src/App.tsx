@@ -4,6 +4,7 @@ import Home from "pages/EmploeeyApp/Home/Home";
 import About from "pages/EmploeeyApp/About/About";
 import ContactUs from "pages/EmploeeyApp/ContactUs/ContactUs";
 import Login from "pages/EmploeeyApp/Login/Login";
+import Clients from "pages/EmploeeyApp/Clients/Clients";
 
 import GlobalStyles from "styles/GlobalStyles";
 
@@ -18,6 +19,9 @@ import Lesson06 from "./lessons/Lesson06/Lesson06";
 import Lesson07 from "./lessons/Lesson07/Lesson07";
 import Lesson08 from "lessons/Lesson08/Lesson08";
 import Layout from "components/Layout/Layout";
+import Facebook from "pages/EmploeeyApp/Clients/Facebook/Facebook";
+import Instagram from "pages/EmploeeyApp/Clients/Instagram/Instagram";
+import Telegram from "pages/EmploeeyApp/Clients/Telegram/Telegram";
 
 function App() {
   return (
@@ -39,8 +43,12 @@ function App() {
           // элементы - это страницы
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/about" element={<About />} />
+          <Route path="/clients" element={<Clients />} />
           <Route path="/login" element={<Login />} />
-          <Route path="*" element="Page not found!"/>
+          <Route path="*" element="Page not found!" />
+          <Route path="/clients/facebook" element={<Facebook />} />
+          <Route path="/clients/instagram" element={<Instagram />} />
+          <Route path="/clients/telegram" element={<Telegram/>} />
         </Routes>
       </Layout>
     </BrowserRouter>

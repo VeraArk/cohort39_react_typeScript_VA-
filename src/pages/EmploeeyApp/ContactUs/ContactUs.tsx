@@ -1,7 +1,13 @@
-import {PageWrapper} from "./styles"
-import 
+import ContactUsForm from "components/ContactUsForm/ContactUsForm";
 
-function ContactUs(){
-    return<PageWrapper> Information about company</PageWrapper>
+import { PageWrapper } from "./styles";
+
+function ContactUs() {
+  return (
+    <PageWrapper>
+      <ContactUsForm />
+    </PageWrapper>
+  );
 }
-export default ContactUs
+
+export default ContactUs;
