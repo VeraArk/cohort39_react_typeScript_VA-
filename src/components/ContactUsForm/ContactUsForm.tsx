@@ -1,4 +1,4 @@
-import { useFormik } from "formik";
+import {} from "formik"
 import * as Yup from "yup";
 
 import Input from "components/Input/Input";
@@ -7,7 +7,7 @@ import Button from "components/Button/Button";
 import { ContactUsWrapper, Title, InputsContainer } from "./styles";
 import { CONTUCT_US_NAMES } from "./types";
 
-function ContactUs() {
+function ContactUsForm() {
 
 // Валидация
 const validationSchema = Yup.object().shape({
@@ -80,4 +80,4 @@ const validationSchema = Yup.object().shape({
   );
 }
 
-export default ContactUs;
+export default ContactUsForm;

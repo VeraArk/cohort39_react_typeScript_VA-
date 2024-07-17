@@ -1,10 +1,10 @@
 import { PageWrapper } from "homework/Homework07/styles";
 
-import ContactUs from "components/ContactUs/ContactUs";
+import ContactUsForm  from "components/ContactUsForm/ContactUsForm";
 
 function Homework11(){
     return (<PageWrapper>
-    <ContactUs/>
+    <ContactUsForm />
     </PageWrapper>)
 }
 
