@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 import {
   LayoutWrapper,
   Header,
@@ -14,10 +16,15 @@ import {
 import { LayoutProps } from "./types";
 
 function Layout({ children }: LayoutProps) {
+  const navigate = useNavigate();
+  const goToHomePage = () => {
+    navigate("/");
+  };
+
   return (
     <LayoutWrapper>
       <Header>
-        <Logo>
+        <Logo onClick={goToHomePage}>
           <LogoImg
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxOGDYH2tzlcwZSDpjg0qRGgEHAxVhsKHFUg&s"
             alt="App logo"
@@ -56,6 +63,15 @@ function Layout({ children }: LayoutProps) {
               fontWeight: isActive ? "bold" : "normal",
               textDecoration: isActive ? "underline" : "none",
             })}
+            to="/clients"
+          >
+            Clients
+          </Link>
+          <Link
+            style={({ isActive }) => ({
+              fontWeight: isActive ? "bold" : "normal",
+              textDecoration: isActive ? "underline" : "none",
+            })}
             to="/login"
           >
             Log In
@@ -71,10 +87,11 @@ function Layout({ children }: LayoutProps) {
           />
         </FooterLogo>
         <FooterNavigation>
-          <FooterLink href="#">Home</FooterLink>
-          <FooterLink href="#">Contact Us</FooterLink>
-          <FooterLink href="#">About</FooterLink>
-          <FooterLink href="#">Log In</FooterLink>
+          <FooterLink to="/">Home</FooterLink>
+          <FooterLink to="/contactUs">Contact Us</FooterLink>
+          <FooterLink to="/about">About</FooterLink>
+          <FooterLink to="/clients">Clients</FooterLink>
+          <FooterLink to="/login">Log In</FooterLink>
         </FooterNavigation>
       </Footer>
     </LayoutWrapper>

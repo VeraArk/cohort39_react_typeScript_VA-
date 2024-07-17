@@ -1,7 +1,13 @@
-import {PageWrapper} from "./styles"
+import LoginForm from "components/LoginForm/LoginForm";
 
+import { PageWrapper } from "./styles";
 
-function Login(){
-    return<PageWrapper> Information about company</PageWrapper>
+function LogIn() {
+  return (
+    <PageWrapper>
+      <LoginForm />
+    </PageWrapper>
+  );
 }
-export default Login;
+
+export default LogIn;
