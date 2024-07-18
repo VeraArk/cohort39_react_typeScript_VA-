@@ -18,16 +18,19 @@ import Homework11 from "homework/Homework11/Homework11";
 import Lesson06 from "./lessons/Lesson06/Lesson06";
 import Lesson07 from "./lessons/Lesson07/Lesson07";
 import Lesson08 from "lessons/Lesson08/Lesson08";
+import Lesson13 from "lessons/Lesson13/Lesson13/Lesson13";
+
 import Layout from "components/Layout/Layout";
 import Facebook from "pages/EmploeeyApp/Clients/Facebook/Facebook";
 import Instagram from "pages/EmploeeyApp/Clients/Instagram/Instagram";
 import Telegram from "pages/EmploeeyApp/Clients/Telegram/Telegram";
 
+
 function App() {
   return (
     <BrowserRouter>
       <GlobalStyles />
-      <></>
+
       {/*< Homework06/>*/}
       {/*<Homework07 />*/}
       {/*<Homework08 />*/}
@@ -36,7 +39,9 @@ function App() {
       {/*<Lesson07/>*/}
       {/*<Lesson08 />*/}
 
-      <Layout>
+      <Lesson13 />
+      
+      {/* <Layout>
         {" "}
         <Routes>
           <Route path="/" element={<Home />} />
@@ -50,7 +55,7 @@ function App() {
           <Route path="/clients/instagram" element={<Instagram />} />
           <Route path="/clients/telegram" element={<Telegram/>} />
         </Routes>
-      </Layout>
+      </Layout>>*/}
     </BrowserRouter>
   );
 }
