@@ -14,6 +14,7 @@ import Homework08 from "homework/Homework08/Homework08";
 import Homework09 from "homework/Homework09/Homework09";
 import Homework10 from "homework/Homework10/Homework10";
 import Homework11 from "homework/Homework11/Homework11";
+import Homework13 from "homework/Homework13/Homework13";
 
 import Lesson06 from "./lessons/Lesson06/Lesson06";
 import Lesson07 from "./lessons/Lesson07/Lesson07";
@@ -24,7 +25,6 @@ import Layout from "components/Layout/Layout";
 import Facebook from "pages/EmploeeyApp/Clients/Facebook/Facebook";
 import Instagram from "pages/EmploeeyApp/Clients/Instagram/Instagram";
 import Telegram from "pages/EmploeeyApp/Clients/Telegram/Telegram";
-
 
 function App() {
   return (
@@ -38,9 +38,10 @@ function App() {
 
       {/*<Lesson07/>*/}
       {/*<Lesson08 />*/}
+      {/*<Lesson13 />*/}
 
-      <Lesson13 />
-      
+      <Homework13 />
+
       {/* <Layout>
         {" "}
         <Routes>
