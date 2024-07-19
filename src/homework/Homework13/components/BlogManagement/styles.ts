@@ -38,6 +38,7 @@ export const Textarea = styled.textarea`
   padding: 12px;
   outline: none;
 `;
+
 export const ButtonController = styled.div`
   width: 250px;
   height: 100px;

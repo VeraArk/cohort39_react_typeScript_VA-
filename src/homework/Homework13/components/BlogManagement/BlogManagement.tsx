@@ -26,10 +26,9 @@ function BlogManagement() {
   };
 
   const getMessage = (event: MouseEvent) => {
-    event.preventDefault();
     setSubmittedMessage(textMessage);
   };
-
+// В textarea обязательно дубліровать value- на случай, если нужно будет где-то переиспользовать введенное значение
   return (
     <MessageContext.Provider value={submittedMessage}>
       <BlogManagerWrapper>
@@ -39,6 +38,7 @@ function BlogManagement() {
             id="text-id"
             name="textOfMessage"
             onChange={handleChange}
+            value = {textMessage}
           ></Textarea>
         </TextareaContainer>
         <ButtonController>

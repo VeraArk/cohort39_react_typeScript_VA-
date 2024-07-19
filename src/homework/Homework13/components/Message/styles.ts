@@ -3,8 +3,9 @@ import styled from "@emotion/styled";
 export const MessageWrapper = styled.div`
 display: flex;
 flex-direction: column;
-width: 550px;
-height: 400px;
+min-width: 300px;
+min-height: 400px;
+word-break: break-all;
 padding: 20px;
 border: 1px;
 border-radius: 7px;
